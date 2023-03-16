@@ -2,7 +2,7 @@ Unofficial TAP 1.0 install script, this is written out of my personal Interest.
 
 # tap-script
 Deploy an ubuntu machine with minimum config                                                                                                                                                                              
-Git clone https://github.com/Eknathreddy09/tap-script                                                                                
+Git clone https://github.com/anilvmware/tap-script.git                                                                               
 Navigate to directory > $HOME/tap-script                                          
 Run ./tap-script.sh                                                                     
 Enter the values : AKS or EKS or GKE, Tanzu network token, Tanzu net username, Tanzu net password, Github Token, Domain name (for learning portal)                
