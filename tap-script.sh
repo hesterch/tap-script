@@ -47,10 +47,10 @@ if [ "$cloud" == "AKS" ];
 	 kubectl get nodes
          echo "#####################################################################################################"
 	 echo "###### Create RG for Repo  ######"
-	 az group create --name tap-imagerepo-RG --location $region
+	 az group create --name tap-test-imagerepo-RG --location $region
 	 echo "####### Create container registry  ############"
          echo "#####################################################################################################"
-	 az acr create --resource-group tap-imagerepo-RG --name taptestdemoacr --sku Standard
+	 az acr create --resource-group tap-test-imagerepo-RG --name taptestdemoacr --sku Standard
 	 echo "####### Fetching acr Admin credentials ##########"
 	 az acr update -n taptestdemoacr --admin-enabled true
          acrusername=$(az acr credential show --name taptestdemoacr --query "username" -o tsv)
