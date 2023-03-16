@@ -352,10 +352,10 @@ fi
          
      echo "########## Installing Tanzu CLI  #############"
      pivnet login --api-token=${pivnettoken}
-         pivnet download-product-files --product-slug='tanzu-cluster-essentials' --release-version='1.0.0' --product-file-id=1105818
+         pivnet download-product-files --product-slug='tanzu-cluster-essentials' --release-version='1.3.0' --product-file-id=1330472
      mkdir $HOME/tanzu-cluster-essentials
-     tar -xvf tanzu-cluster-essentials-linux-amd64-1.0.0.tgz -C $HOME/tanzu-cluster-essentials
-     export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:82dfaf70656b54dcba0d4def85ccae1578ff27054e7533d08320244af7fb0343
+     tar -xvf tanzu-cluster-essentials-linux-amd64-1.3.0.tgz -C $HOME/tanzu-cluster-essentials
+     export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:54bf611711923dccd7c7f10603c846782b90644d48f1cb570b43a082d18e23b9
      export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
      export INSTALL_REGISTRY_USERNAME=$tanzunetusername
      export INSTALL_REGISTRY_PASSWORD=$tanzunetpassword
@@ -365,12 +365,12 @@ fi
      sudo cp $HOME/tanzu-cluster-essentials/kapp /usr/local/bin/kapp
          kapp version
      echo "#################################"
-         pivnet download-product-files --product-slug='tanzu-application-platform' --release-version='1.0.0' --product-file-id=1114447
+         pivnet download-product-files --product-slug='tanzu-application-platform' --release-version='1.3.0' --product-file-id=1310085
      mkdir $HOME/tanzu
          tar -xvf tanzu-framework-linux-amd64.tar -C $HOME/tanzu
      export TANZU_CLI_NO_INIT=true
      cd $HOME/tanzu
-         sudo install cli/core/v0.10.0/tanzu-core-linux_amd64 /usr/local/bin/tanzu
+         sudo install cli/core/v0.25.0/tanzu-core-linux_amd64 /usr/local/bin/tanzu
          tanzu version
      tanzu plugin install --local cli all
          tanzu plugin list
