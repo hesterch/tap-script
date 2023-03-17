@@ -363,7 +363,7 @@ fi
      ./install.sh
      echo "######## Installing Kapp ###########"
      sudo cp $HOME/tanzu-cluster-essentials/kapp /usr/local/bin/kapp
-     sudo cp $HOME/tanzu-cluster-essentials/impkg /usr/local/bin/imgpkg
+     sudo cp $HOME/tanzu-cluster-essentials/imgpkg /usr/local/bin/imgpkg
          kapp version
      echo "#################################"
          pivnet download-product-files --product-slug='tanzu-application-platform' --release-version='1.4.2' --product-file-id=1433868
