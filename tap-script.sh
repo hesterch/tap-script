@@ -366,7 +366,7 @@ fi
      sudo cp $HOME/tanzu-cluster-essentials/impkg /usr/local/bin/imgpkg
          kapp version
      echo "#################################"
-         pivnet download-product-files --product-slug='tanzu-application-platform' --release-version='1.4.1' --product-file-id=1423948
+         pivnet download-product-files --product-slug='tanzu-application-platform' --release-version='1.4.2' --product-file-id=1433868
      mkdir $HOME/tanzu
          tar -xvf tanzu-framework-linux-amd64.tar -C $HOME/tanzu
      export TANZU_CLI_NO_INIT=true
