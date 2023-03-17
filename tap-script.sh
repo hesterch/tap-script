@@ -29,28 +29,28 @@ if [ "$cloud" == "AKS" ];
          read -p "Enter the Subscription ID: " subscription
          read -p "Enter the region: " region
          echo "#########################################"
-         echo "Resource group created with name tap-workshop-cluster-RG in region and subscription mentioned above"
+         echo "Resource group created with name anil-tap-workshop-cluster-RG in region and subscription mentioned above"
          echo "#########################################"
-	 az group create --name tap-workshop-cluster-RG --location $region --subscription $subscription
+	 az group create --name anil-tap-workshop-cluster-RG --location $region --subscription $subscription
          echo "#########################################"
 	 echo "Creating AKS cluster with 3 node and sku as Standard_B8ms"
          echo "#########################################"
-         az aks create --resource-group tap-workshop-cluster-RG --name tap-cluster-1 --subscription $subscription --node-count 3 --enable-addons monitoring --generate-ssh-keys --node-vm-size Standard_B8ms -z 1 --enable-cluster-autoscaler --min-count 3 --max-count 3
+         az aks create --resource-group anil-tap-workshop-cluster-RG --name tap-cluster-1 --subscription $subscription --node-count 3 --enable-addons monitoring --generate-ssh-keys --node-vm-size Standard_B8ms -z 1 --enable-cluster-autoscaler --min-count 3 --max-count 3
          echo "############### Created AKS Cluster ###############"
 	 echo "############### Install kubectl ##############"
 	 sudo az aks install-cli
 	 echo "############### Set the context ###############"
 	 az account set --subscription $subscription
-	 az aks get-credentials --resource-group tap-workshop-cluster-RG --name tap-cluster-1
+	 az aks get-credentials --resource-group anil-tap-workshop-cluster-RG --name tap-cluster-1
 	 echo "############## Verify the nodes #################"
          echo "#####################################################################################################"
 	 kubectl get nodes
          echo "#####################################################################################################"
 	 echo "###### Create RG for Repo  ######"
-	 az group create --name tap-workshop-imagerepo-RG --location $region
+	 az group create --name anil-tap-workshop-imagerepo-RG --location $region
 	 echo "####### Create container registry  ############"
          echo "#####################################################################################################"
-	 az acr create --resource-group tap-workshop-imagerepo-RG --name taptestdemoacr --sku Standard
+	 az acr create --resource-group anil-tap-workshop-imagerepo-RG --name taptestdemoacr --sku Standard
 	 echo "####### Fetching acr Admin credentials ##########"
 	 az acr update -n taptestdemoacr --admin-enabled true
          acrusername=$(az acr credential show --name taptestdemoacr --query "username" -o tsv)
