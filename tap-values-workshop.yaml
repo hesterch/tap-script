@@ -4,12 +4,12 @@ shared:
   image_registry:
     project_path: "tanzupartnerworkshop.azurecr.io/tap1.3/tap-demo/tap-packages"
     username: "tanzupartnerworkshop"
-    password: "L0Vp8+SF0Gbll0gsgvi8JNfwQHlV=MUb"
+    password: "password"
 ceip_policy_disclosed: true # Installation fails if this is set to 'false'
 buildservice:
   kp_default_repository: "tanzupartnerworkshop.azurecr.io/tap13/build-service"
   kp_default_repository_username: "tanzupartnerworkshop"
-  kp_default_repository_password: "L0Vp8+SF0Gbll0gsgvi8JNfwQHlV=MUb"
+  kp_default_repository_password: "password"
 supply_chain: testing_scanning
 ootb_supply_chain_testing_scanning:
 #  cluster_builder: function
@@ -36,7 +36,7 @@ learningcenter:
     secretName: tap.tanzupartnerdemo.com-tls
   imageRegistry:
     username: "tanzupartnerworkshop"
-    password: "L0Vp8+SF0Gbll0gsgvi8JNfwQHlV=MUb"
+    password: "password"
     host: "tanzupartnerworkshop.azurecr.io"
   prepullImages: tanzupartnerworkshop.azurecr.io/tapworkshop:v4
 accelerator:
@@ -137,7 +137,7 @@ tap_gui:
     integrations:
       github:
       - host: github.com
-        token: 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
+        token: github-token
 #metadata_store:
 #  app_service_type: LoadBalancer # (optional) Defaults to LoadBalancer. Change to NodePort for distributions that don't support LoadBalancer
 metadata_store:
