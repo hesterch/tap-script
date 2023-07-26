@@ -382,7 +382,7 @@ fi
      export TANZU_CLI_NO_INIT=true
      cd $HOME/tanzu
 #        sudo install cli/core/v0.25.4/tanzu-core-linux_amd64 /usr/local/bin/tanzu
-	 sudo install cli/core/v0.25.0/tanzu-core-linux_amd64 /usr/local/bin/tanzu	 
+	 sudo install cli/core/v0.28.1/tanzu-core-linux_amd64 /usr/local/bin/tanzu	 
          tanzu version
      tanzu plugin install --local cli all
          tanzu plugin list
