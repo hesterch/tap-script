@@ -360,7 +360,7 @@ fi
      tar -xvf tanzu-cluster-essentials-linux-amd64-1.5.0.tgz -C $HOME/tanzu-cluster-essentials 	      
 #    export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:2354688e46d4bb4060f74fca069513c9b42ffa17a0a6d5b0dbb81ed52242ea44
 #    export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:54bf611711923dccd7c7f10603c846782b90644d48f1cb570b43a082d18e23b9 
-     export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:61dff81ced8a604c82e88f4fb78f4eacb1bc27492cf6a07183702137210d6d74
+     export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:79abddbc3b49b44fc368fede0dab93c266ff7c1fe305e2d555ed52d00361b446
      export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
      export INSTALL_REGISTRY_USERNAME=$tanzunetusername
      export INSTALL_REGISTRY_PASSWORD=$tanzunetpassword
