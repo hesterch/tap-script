@@ -353,12 +353,14 @@ fi
      echo "########## Installing Tanzu CLI  #############"
      pivnet login --api-token=${pivnettoken}
 #         pivnet download-product-files --product-slug='tanzu-cluster-essentials' --release-version='1.4.0' --product-file-id=1407185
-	 pivnet download-product-files --product-slug='tanzu-cluster-essentials' --release-version='1.3.0' --product-file-id=1330470
+#	 pivnet download-product-files --product-slug='tanzu-cluster-essentials' --release-version='1.3.0' --product-file-id=1330470
+  pivnet download-product-files --product-slug='tanzu-cluster-essentials' --release-version='1.5.0' --product-file-id=1460876
      mkdir $HOME/tanzu-cluster-essentials
 #    tar -xvf tanzu-cluster-essentials-linux-amd64-1.4.0.tgz -C $HOME/tanzu-cluster-essentials
-     tar -xvf tanzu-cluster-essentials-linux-amd64-1.3.0.tgz -C $HOME/tanzu-cluster-essentials 	      
+     tar -xvf tanzu-cluster-essentials-linux-amd64-1.5.0.tgz -C $HOME/tanzu-cluster-essentials 	      
 #    export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:2354688e46d4bb4060f74fca069513c9b42ffa17a0a6d5b0dbb81ed52242ea44
-     export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:54bf611711923dccd7c7f10603c846782b90644d48f1cb570b43a082d18e23b9     
+#    export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:54bf611711923dccd7c7f10603c846782b90644d48f1cb570b43a082d18e23b9 
+     export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:61dff81ced8a604c82e88f4fb78f4eacb1bc27492cf6a07183702137210d6d74
      export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
      export INSTALL_REGISTRY_USERNAME=$tanzunetusername
      export INSTALL_REGISTRY_PASSWORD=$tanzunetpassword
@@ -368,13 +370,14 @@ fi
      sudo cp $HOME/tanzu-cluster-essentials/kapp /usr/local/bin/kapp
      sudo cp $HOME/tanzu-cluster-essentials/imgpkg /usr/local/bin/imgpkg
          kapp version
-     echo "#################################"
+     echo "############ Downlaoding/Installing TAP 1.5 #####################"
 #         pivnet download-product-files --product-slug='tanzu-application-platform' --release-version='1.4.0' --product-file-id=1404618
 #       pivnet download-product-files --product-slug='tanzu-application-platform' --release-version='1.3.0' --product-file-id=1310085
-       pivnet download-product-files --product-slug='tanzu-application-platform' --release-version='1.5.3' --product-file-id=1478716
+       pivnet download-product-files --product-slug='tanzu-application-platform' --release-version='1.5.3' --product-file-id=1478717
      mkdir $HOME/tanzu
 #        tar -xvf tanzu-framework-linux-amd64-v0.25.4.tar -C $HOME/tanzu
-        tar -xvf tanzu-framework-linux-amd64.tar -C $HOME/tanzu
+ #       tar -xvf tanzu-framework-linux-amd64.tar -C $HOME/tanzu
+	tar -xvf  tanzu-framework-linux-amd64-v0.28.1.3.tar -C $HOME/tanzu
      export TANZU_CLI_NO_INIT=true
      cd $HOME/tanzu
 #        sudo install cli/core/v0.25.4/tanzu-core-linux_amd64 /usr/local/bin/tanzu
